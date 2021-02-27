@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout con Stripe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Checkout con Stripe</h1>
+    <a href="crear.html" class="btn btn-success m-2">+crear producto</a>
+    <section id="tacos" class="tacos"></section>
+    <template id="taco-template">
+            <figure class="taco">
+                <img>
+                <figcaption></figcaption>
+        </figure>
+  </template>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/stripe-checkout.js" type="module"></script>
+</body>
+
+</html>
