@@ -23,7 +23,7 @@ const getPay = async() => {
 d.addEventListener("DOMContentLoaded", e => {
     var numero = '300';
     var resultado = numero.padEnd(3, "0");
-    console.log(resultado);
+   
     // getPay();
 });
 
@@ -38,13 +38,14 @@ Promise.all([
         products = json[0].data;
         prices = json[1].data;
 
-        console.log(prices);
+      
         prices.forEach(el => {
+           
 
             let productData = products.filter(product => product.id === el.product);
             $template_tacos.querySelector(".taco").setAttribute("data-price", el.id);
             // $template_tacos.querySelector("img").src = "assets/tacos.jpg";
-            $template_tacos.querySelector("img").src = productData[0].images[0] ? productData[0].images[0] : "https://www.ricelake.co.in/images/noproduct.png";
+            $template_tacos.querySelector("img").src = productData[0].images[0] ? productData[0].images[0] : "https://unaricareceta.com/wp-content/uploads/2020/04/capture-20200420-231640-1.jpg";
             $template_tacos.querySelector("img").alt = productData[0].name;
             $template_tacos.querySelector("figcaption").innerHTML = `
              ${productData[0].name}
@@ -58,12 +59,13 @@ Promise.all([
         $section_tacos.appendChild($fragmet);
 
     }).catch(err => {
+      
         let message = err.statusText || "Ocurrio un err";
         $section_tacos.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
     });
 
 d.addEventListener("click", e => {
-    console.log(e.target)
+    
     if (e.target.matches(".taco *")) {
         let price = e.target.parentElement.getAttribute("data-price");
         Stripe(STRIPE_KEYS.public)

@@ -29,15 +29,18 @@ d.addEventListener("submit", async e => {
                         'Authorization': `Bearer sk_test_51I9EwXBKcPEpELLASrxtkOwNUJgIe2Tx72og68V7N3HIrfs6VBPeJjJsB4lbzPy2elanYjeOsdNjrNQQqJTptNsD006lLlwr1s`,
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: `currency=mxn&unit_amount=${costoFormat}&product=${dataProduct['id']}`
+                    body: `currency=mxn&unit_amount=${costoFormat}&recurring[interval]=month&product=${dataProduct['id']}`
 
                 });
-                console.log(response2);
+
+                if(response2.ok){
+                    window.location.href="index.html"
+                }
+               
             }
 
         } catch (err) {
-            console.log("errr" + err.statusText);
-            console.log(err);
+           
         }
 
     }

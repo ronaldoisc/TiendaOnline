@@ -4,6 +4,10 @@ html {
     font-size: 16px;
 }
 
+.body {
+    background-color: rgb(235, 235, 235);
+}
+
 *,
 *:before,
 *:after {
@@ -20,15 +24,10 @@ html {
     margin: 1rem;
 }
 
-.taco img {
-    border-radius: 0;
-    /* margin-top: 1rem; */
-    width: 100%;
-}
-
 .taco {
-    background-color: crimson;
-    color: chartreuse;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
     font-size: 125%;
     text-align: center;
     cursor: pointer;
@@ -39,11 +38,11 @@ html {
     opacity: .9;
 }
 
-
-/* .taco img {
-    max-width: 100%;
-    height: auto;
-} */
+.taco img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
 
 .taco figcaption {
     padding: 1rem;
